@@ -1,1 +1,9 @@
 
+Learn how to read a comma-separated sample metadata file containing semicolon-separated FASTQ file lists, and inspect parsed outputs using channels in Nextflow DSL2.
+
+
+
+Channel.fromPath(params.metatab)
+    .splitCsv(header:true, sep:',')
+
+

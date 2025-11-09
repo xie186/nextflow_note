@@ -1,0 +1,4 @@
+sample_id,fastq_1,fastq_2
+S1,/path/to/sample1_fc1_R1.fastq.gz;/path/to/sample1_fc1_R1.fastq.gz,/path/to/sample1_fc1_R2.fastq.gz;/path/to/sample1_fc1_R2.fastq.gz
+S2,/path/to/sample2_fc1_R1.fastq.gz;/path/to/sample2_fc1_R1.fastq.gz,/path/to/sample2_fc1_R2.fastq.gz;/path/to/sample2_fc1_R2.fastq.gz  
+S3,/path/to/sample3_fc1_R1.fastq.gz;/path/to/sample3_fc1_R1.fastq.gz,/path/to/sample3_fc1_R2.fastq.gz;/path/to/sample3_fc1_R2.fastq.gz  
