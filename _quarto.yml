@@ -3,7 +3,7 @@ project:
   output-dir: _book
 
 book:
-  title: "DNA Methylation Analysis with Nextflow"
+  title: "Mastering Nextflow: From Fundamentals to Expert Practice"
   author: "Shaojun Xie"
   chapters:
     - index.qmd
