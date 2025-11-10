@@ -44,8 +44,6 @@ jobs:
 
       - name: Restore R environment with renv
         uses: r-lib/actions/setup-renv@v2
-        with:
-          path: .renv4nfbook
 
       # From https://github.com/julia-actions/setup-julia
       # - name: Setup Julia
