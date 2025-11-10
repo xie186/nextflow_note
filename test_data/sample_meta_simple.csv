@@ -1,4 +1,4 @@
 sample_id,read1,read2
-S1,/path/to/sample1_fc1_R1.fastq.gz;/path/to/sample1_fc1_R1.fastq.gz,/path/to/sample1_fc1_R2.fastq.gz;/path/to/sample1_fc1_R2.fastq.gz
-S2,/path/to/sample2_fc1_R1.fastq.gz;/path/to/sample2_fc1_R1.fastq.gz,/path/to/sample2_fc1_R2.fastq.gz;/path/to/sample2_fc1_R2.fastq.gz
-S3,/path/to/sample3_fc1_R1.fastq.gz;/path/to/sample3_fc1_R1.fastq.gz,/path/to/sample3_fc1_R2.fastq.gz;/path/to/sample3_fc1_R2.fastq.gz
+sample1,/mnt/ccrsf-static/Analysis/xies4/github_repos/nextflow_note/test_data/PE/test_sample1_fc1_R1.fastq.gz,/mnt/ccrsf-static/Analysis/xies4/github_repos/nextflow_note/test_data/PE/test_sample1_fc1_R2.fastq.gz
+sample1,/mnt/ccrsf-static/Analysis/xies4/github_repos/nextflow_note/test_data/PE/test_sample1_fc2_R1.fastq.gz,/mnt/ccrsf-static/Analysis/xies4/github_repos/nextflow_note/test_data/PE/test_sample1_fc2_R2.fastq.gz
+sample2,/mnt/ccrsf-static/Analysis/xies4/github_repos/nextflow_note/test_data/PE/test_sample2_fc1_R1.fastq.gz,/mnt/ccrsf-static/Analysis/xies4/github_repos/nextflow_note/test_data/PE/test_sample2_fc1_R2.fastq.gz

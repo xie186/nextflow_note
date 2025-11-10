@@ -1,9 +1,14 @@
-## Test 3
+# Test 3
 
 
 
 
-```{nextflow}
+## Utilizing  
+
+This Nextflow plugin provides functionality that can be used in a Nextflow pipeline to work with parameter and sample sheet schema. The added functionality is:
+
+
+```{r}
 #| echo: true
 #| eval: false 
 #| code-line-numbers: true
@@ -22,9 +27,7 @@ nextflow run . \
 
 ```
 
-
-
-### Schema will check whether the files exist or not
+## Schema will check whether the files exist or not
 
 ```
 nextflow run .  \
@@ -37,7 +40,7 @@ With the schema setting, the files specified in `read1` and `read2` fields have 
 If not, the error message below will be shown: 
 
 ::: {.callout-warning}
-## Warning
+## Error
 
  N E X T F L O W   ~  version 25.10.0
 
@@ -56,6 +59,49 @@ The following errors have been detected in /mnt/ccrsf-static/Analysis/xies4/gith
 -> Entry 3: Error for field 'read1' (/path/to/sample3_fc1_R1.fastq.gz;/path/to/sample3_fc1_R1.fastq.gz): the file or directory '/path/to/sample3_fc1_R1.fastq.gz;/path/to/sample3_fc1_R1.fastq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
 :::
 
+
+
+
+
+## Transform samplesheet in CSV to structured NextFlow channell
+
+
+In the code above, a plain Groovy list is returned. 
+
+The code below uses explicit `tuple()` constructor - the canonical DSL 2 form, making it unambiguous and self-documenting. 
+
+```{r}
+#| echo: true
+#| eval: false 
+#| code-line-numbers: true
+#| file: nf_example/test_nf_schema_input_tuple.nf
+```
+
+This is the standard tuple structure most downstream modules in DSL2 workflows (e.g. nf-core) expect. 
+
+```{r}
+tuple(id, meta_map, reads_list)
+```
+
+Explicit tuples make your workflow compatible with DSL 2 modules, where inputs are declared like: 
+
+```{r}
+input: 
+tuple val(id), val(meta), path(reads)
+```
+
+The code below uses collapses the `if/else` block into a one-liner ternary operator. The variable `isSE` stores the boolean. 
+
+```{r}
+def isSE = !read2
+tuple(
+  meta.id as String,
+  meta + [ single_end: isSE ],
+  isSE ? [ read1 ] : [ read1, read2 ]
+)
+```
+
+This style makes your mapping functional and side-effect-free, which aligns better with how Nextflow channels are transformed. It’s also easier to maintain if you later expand the tuple (e.g., add another metadata field).
 
 
 
