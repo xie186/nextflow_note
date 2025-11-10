@@ -80,6 +80,9 @@ The code below uses explicit `tuple()` constructor - the canonical DSL 2 form, m
 This is the standard tuple structure most downstream modules in DSL2 workflows (e.g. nf-core) expect. 
 
 ```{r}
+#| echo: true
+#| eval: false 
+#| code-line-numbers: true
 tuple(id, meta_map, reads_list)
 ```
 
