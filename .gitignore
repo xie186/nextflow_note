@@ -1,0 +1,58 @@
+# Quarto build outputs
+_book/
+_site/
+*.html
+*.pdf
+*.epub
+*.docx
+*.log
+*.aux
+*.out
+*.toc
+*.tex
+
+# R and RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Rprofile
+.Rproj
+.Rapp.history
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.env/
+.venv/
+venv/
+*.pyc
+
+# Quarto and Pandoc caches
+.quarto/
+.cache/
+.knit_cache/
+*_cache/
+*.knit.md
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor backups
+*~
+*.swp
+*.bak
+
+# Logs and temp files
+*.tmp
+*.log
+*.out
+*.err
+
+# GitHub Pages build branches
+gh-pages/
+
+.nextflow/
+.nextflow.log.*
