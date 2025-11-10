@@ -86,6 +86,10 @@ tuple(id, meta_map, reads_list)
 Explicit tuples make your workflow compatible with DSL 2 modules, where inputs are declared like: 
 
 ```{r}
+#| echo: true
+#| eval: false 
+#| code-line-numbers: true
+
 input: 
 tuple val(id), val(meta), path(reads)
 ```
@@ -93,6 +97,9 @@ tuple val(id), val(meta), path(reads)
 The code below uses collapses the `if/else` block into a one-liner ternary operator. The variable `isSE` stores the boolean. 
 
 ```{r}
+#| echo: true
+#| eval: false 
+#| code-line-numbers: true
 def isSE = !read2
 tuple(
   meta.id as String,
