@@ -3,3 +3,8 @@ project:
 
 
 
+
+# Add this section
+publish:
+  on:
+    gh-pages
