@@ -13,6 +13,7 @@ book:
   - part: Foundations
     chapters: 
       - workflow_overview.qmd
+      - channels_processes.qmd
       - DSL2.qmd
 
   - part: Building Real Pipelines
