@@ -1,9 +1,9 @@
-# Test 2
+# Channel and Process
 
 
 
 ```{r}
-#! echo: true
+#| echo: true
 #| eval: false 
 #| code-line-numbers: true
 #| file: nf_example/test_nf_FilePair.nf
